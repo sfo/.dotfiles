@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# .bash_paths
+
+if [ -f ~/.bash_paths.local ]; then
+    . ~/.bash_paths.local
+fi

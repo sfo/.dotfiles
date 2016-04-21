@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# .bash_exports
+
+export EDITOR=vim
+export SVN_EDITOR=vim
+export SWT_GTK3=0
+
+if [ -f ~/.bash_exports.local ]; then
+    . ~/.bash_exports.local
+fi

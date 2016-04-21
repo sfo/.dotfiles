@@ -1,0 +1,22 @@
+[core]
+	autocrlf = input
+
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        br = branch
+	ft = fetch
+        d = diff
+        dt = difftool
+	tr = log --graph --oneline --all --color --decorate --date=short
+        sr = svn rebase
+        sc = svn dcommit
+        rb = rebase
+[push]
+        default = simple
+
+[diff]
+	tool = kdiff3
+[include]
+	path = .gitconfig.local
