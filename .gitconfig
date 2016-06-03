@@ -20,3 +20,5 @@
 	tool = kdiff3
 [include]
 	path = .gitconfig.local
+[gpg]
+	program = gpg2

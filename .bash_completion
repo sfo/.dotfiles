@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# .bash_completion
+
+
+## guard is required because ubuntu sources this file 
+## in /usr/share/bash-completion/bash_completion which
+## will lead to infinite loop
+if [ -z ${_BASH_COMPLETION_GUARD_+x} ]; then
+  export _BASH_COMPLETION_GUARD_=1
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi

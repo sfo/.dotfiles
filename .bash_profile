@@ -16,6 +16,7 @@ load_dotfiles() {
         $HOME/.bash_aliases
         $HOME/.bash_prompt
         $HOME/.bash_paths
+        $HOME/.bash_completion
     )
 
     for index in ${!files[*]}
