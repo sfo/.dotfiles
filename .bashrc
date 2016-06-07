@@ -5,7 +5,15 @@
 # will be executed after screen is started
 # will skip .bash_profile --> do stuff that should happen out of screen there
 
+# fixes scp not working issue, source: http://unix.stackexchange.com/a/18647
+# If not running interactively, don't do anything
+[[ $- == *i* ]] || return
+
 # set 256 color profile where possible
+if [ -f /etc/bashrc ] ; then
+    . /etc/bashrc
+fi
+
 if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
     export TERM=gnome-256color
 elif infocmp xterm-256color >/dev/null 2>&1; then
