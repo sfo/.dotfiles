@@ -1,24 +1,25 @@
 [core]
-	autocrlf = input
+    autocrlf = input
 
 [alias]
-        co = checkout
-        ci = commit
-        st = status
-        br = branch
-	ft = fetch
-        d = diff
-        dt = difftool
-	tr = log --graph --oneline --all --color --decorate --date=short
-        sr = svn rebase
-        sc = svn dcommit
-        rb = rebase
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    ft = fetch
+    d = diff
+    dt = difftool
+    tr = log --graph --oneline --all --color --decorate --date=short
+    sr = svn rebase
+    sc = svn dcommit
+    rb = rebase
+    pt = push --follow-tags
 [push]
-        default = simple
+    default = simple
 
 [diff]
-	tool = kdiff3
+    tool = kdiff3
 [include]
-	path = .gitconfig.local
+    path = .gitconfig.local
 [gpg]
-	program = gpg2
+    program = gpg2
