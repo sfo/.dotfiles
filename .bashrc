@@ -40,3 +40,7 @@ load_dotfiles() {
 
 load_dotfiles
 unset load_dotfiles
+
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+fi
