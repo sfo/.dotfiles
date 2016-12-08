@@ -7,3 +7,7 @@ set smarttab
 set cursorline
 filetype plugin on
 syntax on
+
+if &diff
+    colorscheme evening
+endif
