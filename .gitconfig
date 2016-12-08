@@ -9,6 +9,7 @@
     ft = fetch
     d = diff
     dc = diff --cached
+    df = diff --name-only
     dt = difftool
     tr = log --graph --oneline --all --color --decorate --date=short
     sr = svn rebase
