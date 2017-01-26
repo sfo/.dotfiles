@@ -2,14 +2,13 @@
 
 # .bashrc
 
-# will be executed after screen is started
-# will skip .bash_profile --> do stuff that should happen out of screen there
+# will be executed after tmux/screen is started
+# will skip .bash_profile --> do stuff that should happen out of tmux/screen there
 
 # fixes scp not working issue, source: http://unix.stackexchange.com/a/18647
 # If not running interactively, don't do anything
 [[ $- == *i* ]] || return
 
-# set 256 color profile where possible
 if [ -f /etc/bashrc ] ; then
     . /etc/bashrc
 fi
