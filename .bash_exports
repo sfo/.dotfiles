@@ -6,7 +6,7 @@ export EDITOR=vim
 export SVN_EDITOR=vim
 export SWT_GTK3=0
 export LC_ALL=en_US.UTF-8
-export HISTSIZE=-1
+export HISTSIZE=1000
 export HISTFILESIZE=100000
 
 if [ -f ~/.bash_exports.local ]; then
