@@ -10,4 +10,6 @@ syntax on
 
 if &diff
     colorscheme evening
+else
+    colorscheme elflord
 endif
