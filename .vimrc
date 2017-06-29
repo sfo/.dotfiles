@@ -5,6 +5,7 @@ set softtabstop=4
 set shiftwidth=4
 set smarttab
 set cursorline
+set hlsearch
 filetype plugin on
 syntax on
 
