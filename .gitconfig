@@ -7,6 +7,7 @@
     st = status
     br = branch
     ft = fetch
+    fa = fetch --all -v -p
     d = diff
     dc = diff --cached
     df = diff --name-only
@@ -16,12 +17,19 @@
     sc = svn dcommit
     rb = rebase
     pt = push --follow-tags
+    pm = push -o merge_request.create -o merge_request.target=master -o merge_request.merge_when_pipeline_succeeds 
+
 [push]
     default = simple
 
 [diff]
-    tool = kdiff3
+    tool = vimdiff
 [include]
     path = .gitconfig.local
 [gpg]
     program = gpg2
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
