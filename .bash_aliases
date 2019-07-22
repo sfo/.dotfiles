@@ -18,6 +18,9 @@ alias cd..='cd ..'
 alias ..='cd ..'
 alias ~='cd ~'
 
+alias ctrlc='xclip -selection c'
+alias ctrlv='xclip -selection c -o'
+
 if [ -f ~/.bash_aliases.local ]; then
     . ~/.bash_aliases.local
 fi
