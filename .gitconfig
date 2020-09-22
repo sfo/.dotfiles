@@ -1,5 +1,6 @@
 [core]
     autocrlf = input
+	editor = vim
 
 [alias]
     co = checkout
@@ -12,12 +13,12 @@
     dc = diff --cached
     df = diff --name-only
     dt = difftool
-    tr = log --graph --oneline --all --color --decorate --date=short
+    tr = log --graph --oneline --all --decorate
     sr = svn rebase
     sc = svn dcommit
     rb = rebase
     pt = push --follow-tags
-    pm = push -o merge_request.create -o merge_request.target=master -o merge_request.merge_when_pipeline_succeeds 
+    pm = push -o merge_request.create -o merge_request.target=master -o merge_request.merge_when_pipeline_succeeds -o merge_request.remove_source_branch -o ci.skip
 
 [push]
     default = simple
@@ -28,8 +29,6 @@
     path = .gitconfig.local
 [gpg]
     program = gpg2
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+
+[color]
+    ui = auto
