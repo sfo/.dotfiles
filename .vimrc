@@ -36,7 +36,7 @@ syntax on
 
 """ END OF VIM CONFIGURATION
 """"""""""""""""""""""""""""
-
+let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized8
 
