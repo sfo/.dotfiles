@@ -1,5 +1,6 @@
-""" START VUNDLE CONFIGURATION
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""
+""" START VUNDLE CONFIGURATION """
+""""""""""""""""""""""""""""""""""
 set nocompatible
 filetype off
 
@@ -9,6 +10,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" latex stuff
+Plugin 'lervag/vimtex'
+
+" tagging 
+Plugin 'ludovicchabant/vim-gutentags'
+
+" status line
+Plugin 'itchyny/lightline.vim'
+
 """ Style Plugins
 Plugin 'lifepillar/vim-solarized8'
 
@@ -16,11 +26,10 @@ Plugin 'lifepillar/vim-solarized8'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-""" END OF VUNDLE CONFIGURATION
-"""""""""""""""""""""""""""""""
 
-""" START OF VIM CONFIGURATION
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""
+""" START OF VIM CONFIGURATION """
+""""""""""""""""""""""""""""""""""
 set number
 set ruler
 set expandtab
@@ -34,14 +43,62 @@ set hlsearch
 filetype plugin on
 syntax on
 
-""" END OF VIM CONFIGURATION
-""""""""""""""""""""""""""""
+" Block modification for readonly files
+" Source: https://vi.stackexchange.com/a/10248
+autocmd BufRead * let &l:modifiable = !&readonly
+
+
+""""""""""""""""""""""""""""""""""""""""""
+""" START OF COLORSCHEME CONFIGURATION """
+""""""""""""""""""""""""""""""""""""""""""
 let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized8
 
-""" START OF CUSTOM COMMANDS
-""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""
+""" START OF VIMTEX CONFIGURATION """
+"""""""""""""""""""""""""""""""""""""
+let g:tex_flavor = 'latex'
+
+
+"""""""""""""""""""""""""""""""
+""" GUTENTAGS CONFIGURATION """
+"""""""""""""""""""""""""""""""
+augroup MyGutentagsStatusLineRefresher
+	autocmd!
+	autocmd User GutentagsUpdating call lightline#update()
+	autocmd User GutentagsUpdated call lightline#update()
+augroup END
+
+
+"""""""""""""""""""""""""""""""
+""" LIGHTLINE CONFIGURATION """
+"""""""""""""""""""""""""""""""
+let g:lightline = {
+	\ 'colorscheme': 'solarized',
+	\ 'active': {
+	\   'left': [ 
+	\	  ['mode', 'paste'],
+	\	  ['filename', 'readonly', 'modified' ],
+	\	],
+	\	'right': [
+	\	  ['percent'],
+	\	  ['lineinfo'],
+	\	  ['fileformat','fileencoding', 'filetype'],
+	\	  ['gutentags'],
+	\	],
+	\ },
+	\ 'component_function': {
+	\	'gutentags': 'gutentags#statusline',
+	\ },
+	\}
+
+
+
+""""""""""""""""""""""""""""""""
+""" START OF CUSTOM COMMANDS """
+""""""""""""""""""""""""""""""""
 
 " source: https://vi.stackexchange.com/a/16908/23614
 command Fmtjson %!python -m json.tool
@@ -51,11 +108,4 @@ command Fmtxml %!xmllint --format -
 
 " source: https://vi.stackexchange.com/a/2234/23614
 command Tohex %!xxd
-
-""" END OF CUSTOM COMMANDS
-""""""""""""""""""""""""""
-
-" Block modification for readonly files
-" Source: https://vi.stackexchange.com/a/10248
-autocmd BufRead * let &l:modifiable = !&readonly
 
