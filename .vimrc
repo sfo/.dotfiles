@@ -16,6 +16,12 @@ Plugin 'lervag/vimtex'
 " tagging 
 Plugin 'ludovicchabant/vim-gutentags'
 
+" ultisnips
+"" engine
+Plugin 'SirVer/ultisnips'
+"" snippets
+Plugin 'honza/vim-snippets'
+
 " status line
 Plugin 'itchyny/lightline.vim'
 
@@ -60,6 +66,17 @@ colorscheme solarized8
 """ START OF VIMTEX CONFIGURATION """
 """""""""""""""""""""""""""""""""""""
 let g:tex_flavor = 'latex'
+
+
+"""""""""""""""""""""""""""""""
+""" ULTISNIPS CONFIGURATION """
+"""""""""""""""""""""""""""""""
+
+" change this to something else than <tab> if using YouCompleteMe
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 
 """""""""""""""""""""""""""""""
