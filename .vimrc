@@ -10,18 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" latex stuff
-Plugin 'lervag/vimtex'
-
-" tagging 
-Plugin 'ludovicchabant/vim-gutentags'
-
-" ultisnips
-"" engine
-Plugin 'SirVer/ultisnips'
-"" snippets
-Plugin 'honza/vim-snippets'
-
 " status line
 Plugin 'itchyny/lightline.vim'
 
@@ -62,33 +50,6 @@ set background=dark
 colorscheme solarized8
 
 
-"""""""""""""""""""""""""""""""""""""
-""" START OF VIMTEX CONFIGURATION """
-"""""""""""""""""""""""""""""""""""""
-let g:tex_flavor = 'latex'
-
-
-"""""""""""""""""""""""""""""""
-""" ULTISNIPS CONFIGURATION """
-"""""""""""""""""""""""""""""""
-
-" change this to something else than <tab> if using YouCompleteMe
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
-
-
-"""""""""""""""""""""""""""""""
-""" GUTENTAGS CONFIGURATION """
-"""""""""""""""""""""""""""""""
-augroup MyGutentagsStatusLineRefresher
-	autocmd!
-	autocmd User GutentagsUpdating call lightline#update()
-	autocmd User GutentagsUpdated call lightline#update()
-augroup END
-
-
 """""""""""""""""""""""""""""""
 """ LIGHTLINE CONFIGURATION """
 """""""""""""""""""""""""""""""
@@ -110,7 +71,6 @@ let g:lightline = {
 	\	'gutentags': 'gutentags#statusline',
 	\ },
 	\}
-
 
 
 """"""""""""""""""""""""""""""""
