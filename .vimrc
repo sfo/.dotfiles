@@ -13,6 +13,9 @@ Plugin 'VundleVim/Vundle.vim'
 " status line
 Plugin 'itchyny/lightline.vim'
 
+" CSV plugin
+Plugin 'chrisbra/csv.vim'
+
 """ Style Plugins
 Plugin 'lifepillar/vim-solarized8'
 
