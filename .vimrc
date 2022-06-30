@@ -49,7 +49,7 @@ autocmd BufRead * let &l:modifiable = !&readonly
 """ START OF COLORSCHEME CONFIGURATION """
 """"""""""""""""""""""""""""""""""""""""""
 let g:solarized_termtrans=1
-set background=dark
+set background=light
 colorscheme solarized8
 
 
