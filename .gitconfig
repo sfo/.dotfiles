@@ -13,13 +13,17 @@
     dc = diff --cached
     df = diff --name-only
     dt = difftool
+    dp = difftool --tool=diffpdf
     tr = log --graph --oneline --all --decorate
     sr = svn rebase
     sc = svn dcommit
     rb = rebase
     pt = push --follow-tags
     pm = push -o merge_request.create -o merge_request.target=master -o merge_request.merge_when_pipeline_succeeds -o merge_request.remove_source_branch -o ci.skip
-    as = annex sync --content
+    as = annex sync
+    asc = annex sync --content
+    ap = annex push
+    ao = annex pull
     aa = annex add
     al = annex lock
     au = annex unlock
@@ -29,11 +33,19 @@
 
 [diff]
     tool = vimdiff
+
+[difftool "diffpdf"]
+    cmd = diffpdf \"$LOCAL\" \"$REMOTE\"
+
 [include]
     path = .gitconfig.local
+
 [gpg]
     program = gpg2
 
 [color]
     ui = auto
+
+[init]
+    defaultBranch = master
 
