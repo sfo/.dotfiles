@@ -87,6 +87,8 @@ plugins=(
 )
 autoload -U compinit && compinit
 
+source $HOME/.zshrc.local
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -115,6 +117,4 @@ export EDITOR=vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-source $HOME/.zshrc.local
 
