@@ -14,7 +14,8 @@
     df = diff --name-only
     dt = difftool
     dp = difftool --tool=diffpdf
-    tr = log --graph --oneline --all --decorate
+    tr = log --graph --oneline --decorate --all
+    trm = log --graph --oneline --decorate master
     sr = svn rebase
     sc = svn dcommit
     rb = rebase
