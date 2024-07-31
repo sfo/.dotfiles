@@ -71,23 +71,24 @@ ZSH_THEME="pygmalion"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
 	zsh-vi-mode
     tmux
-    cp
-    docker-compose
     docker
-    gitignore
     mvn
     pip
     sudo
     conda-zsh-completion
     zsh-completions
-    tty-solarized
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    autoenv
 )
 autoload -U compinit && compinit
 
 source $HOME/.zshrc.local
+
+## fix issue with git prompt info:  https://github.com/ohmyzsh/ohmyzsh/issues/12328
+zstyle ':omz:alpha:lib:git' async-prompt no
 
 source $ZSH/oh-my-zsh.sh
 
