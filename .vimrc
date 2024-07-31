@@ -61,7 +61,8 @@ let g:lightline = {
 	\ 'active': {
 	\   'left': [ 
 	\	  ['mode', 'paste'],
-	\	  ['filename', 'readonly', 'modified' ],
+	\	  ['bufnum'],
+	\	  ['relativepath', 'readonly', 'modified' ],
 	\	],
 	\	'right': [
 	\	  ['percent'],
