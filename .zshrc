@@ -72,7 +72,7 @@ ZSH_THEME="pygmalion"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	vi-mode
+	zsh-vi-mode
     tmux
     cp
     docker-compose
