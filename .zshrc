@@ -71,6 +71,7 @@ ZSH_THEME="pygmalion"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    git-prompt
 	zsh-vi-mode
     tmux
     docker
@@ -119,3 +120,6 @@ export EDITOR=vim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# define special alias to allow for alias-replacement also when using sudo
+# cf. https://askubuntu.com/a/22043
+alias sudo='sudo '
