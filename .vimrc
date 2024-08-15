@@ -44,6 +44,10 @@ syntax on
 " Source: https://vi.stackexchange.com/a/10248
 autocmd BufRead * let &l:modifiable = !&readonly
 
+" show all white space characters as visible characters
+" enable with :set list
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+
 
 """"""""""""""""""""""""""""""""""""""""""
 """ START OF COLORSCHEME CONFIGURATION """
