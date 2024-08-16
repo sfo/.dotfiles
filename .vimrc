@@ -16,6 +16,11 @@ Plugin 'itchyny/lightline.vim'
 " CSV plugin
 Plugin 'chrisbra/csv.vim'
 
+" NERDTree file browser
+Plugin 'preservim/nerdtree'
+
+Plugin 'ryanoasis/vim-devicons'
+
 """ Style Plugins
 Plugin 'lifepillar/vim-solarized8'
 
@@ -40,6 +45,7 @@ set vb  " make screen flash as visible bell
 set laststatus=2 " Always display status line
 set cursorline
 set hlsearch
+set encoding=UTF-8
 filetype plugin on
 syntax on
 
