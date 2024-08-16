@@ -28,12 +28,15 @@ filetype plugin indent on    " required
 """ START OF VIM CONFIGURATION """
 """"""""""""""""""""""""""""""""""
 set number
-set ruler
-set expandtab
+set ruler  " show cursor position
+set expandtab  " convert tabs to spaces
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
+set smartindent
+set splitbelow  " when splitting windows, create new ones below current one
+set vb  " make screen flash as visible bell
 set laststatus=2 " Always display status line
 set cursorline
 set hlsearch
