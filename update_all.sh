@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+source ~/.zshrc
+
 ## update dotfiles
 cd ~/.dotfiles
 git pull
