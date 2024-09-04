@@ -16,6 +16,7 @@
     dp = difftool --tool=diffpdf
     tr = log --graph --oneline --decorate --exclude='refs/remotes/*/synced/*' --exclude='refs/heads/synced/*' --exclude='refs/*/git-annex' --all
     trm = log --graph --oneline --decorate master
+    tra = log --graph --oneline --decorate --all
     sr = svn rebase
     sc = svn dcommit
     rb = rebase
