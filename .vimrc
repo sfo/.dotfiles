@@ -21,6 +21,12 @@ Plugin 'preservim/nerdtree'
 
 Plugin 'ryanoasis/vim-devicons'
 
+""" movement and selection plugins
+" add indentation objects to select identically indendet blocks of code
+Plugin 'michaeljsmith/vim-indent-object'
+" add movement operators to select surrounding braces, tags, ticks, etc.
+Plugin 'tpope/vim-surround'
+
 """ Style Plugins
 Plugin 'lifepillar/vim-solarized8'
 
