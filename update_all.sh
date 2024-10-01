@@ -2,24 +2,25 @@
 
 source ~/.zshrc
 
-## update dotfiles
+echo "Updating dotfiles repository ..."
 cd ~/.dotfiles
-git pull
+git pull -q
 
-## update OMZ
+echo "Updating ZSH ..."
 cd $ZSH
-git pull
+git pull -q
 
-## update OMZ custom stuff
+echo "Updating ZSH custom ..."
 cd $ZSH_CUSTOM
-git pull
-git submodule update --init --recursive
+git pull -q
+git submodule update --init --recursive -q
 
-## update TMUX plugins
+echo "Update TMUX plugins ..."
 ~/.tmux/plugins/tpm/bin/install_plugins
 ~/.tmux/plugins/tpm/bin/update_plugins all
 
-## update vim plugins
+echo "Update vim plugins ..."
 vim -c "PluginInstall" -c "qa"
 vim -c "PluginUpdate" -c "qa"
 
+echo "Done."
