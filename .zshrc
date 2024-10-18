@@ -130,5 +130,5 @@ alias sudo='sudo '
 
 # needs xclip installed
 # use like <command> | pbcopy
-alias pbcopy=’xclip -selection clipboard’
-alias pbpaste=’xclip -selection clipboard -o’
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
