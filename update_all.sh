@@ -14,6 +14,7 @@ echo "Updating ZSH custom ..."
 cd $ZSH_CUSTOM
 git pull -q
 git submodule update --init --recursive -q
+setupsolarized dircolors.ansi-light
 
 echo "Update TMUX plugins ..."
 ~/.tmux/plugins/tpm/bin/install_plugins
