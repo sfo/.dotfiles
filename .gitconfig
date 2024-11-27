@@ -14,7 +14,7 @@
     df = diff --name-only
     dt = difftool
     dp = difftool --tool=diffpdf
-    tr = log --graph --oneline --decorate --exclude='refs/remotes/*/synced/*' --exclude='refs/heads/synced/*' --exclude='refs/*/git-annex' --all
+    tr = log --graph --pretty=format:'%C(auto)%h%x09%Creset%C(cyan)%C(bold)%ci%Creset %C(yellow)%cn%x09%Creset%C(auto)%d %C(green)%Creset %s' --date=default --exclude='refs/remotes/*/synced/*' --exclude='refs/heads/synced/*' --exclude='refs/*/git-annex' --all
     trm = log --graph --oneline --decorate master
     tra = log --graph --oneline --decorate --all
     sr = svn rebase
