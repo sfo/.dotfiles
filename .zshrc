@@ -75,6 +75,7 @@ ZSH_THEME="pygmalion"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    git-prompt
     zsh-dircolors-solarized
     zsh-vi-mode
     tmux
