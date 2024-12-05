@@ -30,12 +30,14 @@
     aa = annex add
     al = annex lock
     au = annex unlock
+    addnw = !sh -c 'git diff -U0 -w --no-color --src-prefix=a/ --dst-prefix=b/ "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
 
 [push]
     default = simple
 
 [diff]
     tool = vimdiff
+	wsErrorHighlight = all
 
 [difftool "diffpdf"]
     cmd = diffpdf \"$LOCAL\" \"$REMOTE\"
