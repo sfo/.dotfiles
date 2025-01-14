@@ -31,6 +31,7 @@
     al = annex lock
     au = annex unlock
     addnw = !sh -c 'git diff -U0 -w --no-color --src-prefix=a/ --dst-prefix=b/ "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
+    rf = restore --staged --worktree  # restore full
 
 [push]
     default = simple
