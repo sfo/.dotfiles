@@ -38,7 +38,7 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""
 """ START OF VIM CONFIGURATION """
 """"""""""""""""""""""""""""""""""
-set number
+set number relativenumber
 set ruler  " show cursor position
 set expandtab  " convert tabs to spaces
 set tabstop=4
