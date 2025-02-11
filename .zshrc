@@ -133,3 +133,7 @@ alias sudo='sudo '
 # use like <command> | pbcopy
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# unfunction ts from tmux plugin due to its redefinition of the ts command
+functions -c ts tn
+unfunction ts
