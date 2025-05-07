@@ -8,7 +8,7 @@
     st = status
     br = branch
     ft = fetch
-    fa = fetch --all -v -p
+    fa = fetch --all -v --prune --prune-tags
     d = diff
     dc = diff --cached
     df = diff --name-only
