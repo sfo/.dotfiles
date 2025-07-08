@@ -98,6 +98,7 @@ source $HOME/.zshrc.local
 ## fix issue with git prompt info:  https://github.com/ohmyzsh/ohmyzsh/issues/12328
 zstyle ':omz:alpha:lib:git' async-prompt no
 
+zstyle :omz:plugins:ssh-agent agent-forwarding yes
 zstyle :omz:plugins:ssh-agent lazy yes
 zstyle :omz:plugins:ssh-agent lifetime 8h
 
