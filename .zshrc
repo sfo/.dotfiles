@@ -76,6 +76,7 @@ ZSH_THEME="pygmalion"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git-prompt
+    gitignore
     zsh-dircolors-solarized
     zsh-vi-mode
     tmux

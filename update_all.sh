@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-source ~/.zshrc
+source ${HOME}/.zshrc
 
 echo "Updating dotfiles repository ..."
-cd ~/.dotfiles
+cd ${HOME}/.dotfiles
 git pull -q
 
 echo "Updating ZSH ..."
@@ -17,8 +17,8 @@ git submodule update --init --recursive -q
 setupsolarized dircolors.ansi-light
 
 echo "Update TMUX plugins ..."
-~/.tmux/plugins/tpm/bin/install_plugins
-~/.tmux/plugins/tpm/bin/update_plugins all
+${HOME}/.tmux/plugins/tpm/bin/install_plugins
+${HOME}/.tmux/plugins/tpm/bin/update_plugins all
 
 echo "Update vim plugins ..."
 vim -c "PluginInstall" -c "qa"
