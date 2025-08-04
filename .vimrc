@@ -21,6 +21,8 @@ Plugin 'preservim/nerdtree'
 
 Plugin 'ryanoasis/vim-devicons'
 
+Plugin 'ctrlpvim/ctrlp.vim'
+
 """ movement and selection plugins
 " add indentation objects to select identically indendet blocks of code
 Plugin 'michaeljsmith/vim-indent-object'
