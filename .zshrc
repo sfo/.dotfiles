@@ -143,3 +143,10 @@ alias pbpaste='xclip -selection clipboard -o'
 # unfunction ts from tmux plugin due to its redefinition of the ts command
 functions -c ts tn
 unfunction ts
+
+# display motd in every shell, even local ones and in TMUX
+if [ -d /etc/update-motd.d ]
+then
+    run-parts /etc/update-motd.d/
+fi
+
