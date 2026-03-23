@@ -1,5 +1,9 @@
 #!/bin/bash
 
+mkdir -p ~/.local/bin
+ln -snf ~/.dotfiles/scripts/sysupdate ~/.local/bin/sysupdate
+ln -snf ~/.dotfiles/scripts/need_reboot ~/.local/bin/needs_reboot
+
 ln -snf ~/.dotfiles/htoprc ~/.config/htop/htoprc
 ln -snf ~/.dotfiles/.gitconfig ~/
 ln -snf ~/.dotfiles/.tmux.conf ~/

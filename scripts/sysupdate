@@ -1,0 +1,41 @@
+#!/bin/bash
+
+if [ $EUID != 0 ]
+then
+    sudo "$0" "$@"
+    exit $?
+fi
+
+set -e
+
+exists() {
+    command -v $@ >/dev/null 2>&1
+}
+
+if exists dnf
+then
+    echo "Detected DNF package manager"
+    dnf upgrade --refresh
+elif exists nala
+then
+    echo "Detected NALA package manager"
+    nala full-upgrade
+elif exists apt
+then
+    echo "Detected APT package manager"
+    apt update
+    apt full-upgrade
+else
+    echo "Did not detect DNF or APT package manager, cannot upgrade system!"
+fi
+
+if exists snap
+then
+    snap refresh
+fi
+
+if exists flatpak
+then
+    flatpak update
+fi
+

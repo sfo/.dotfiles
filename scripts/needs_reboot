@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+exists() {
+    command -v $@ >/dev/null 2>&1
+}
+
+if exists dnf 
+then
+    echo "Detected DNF package manager"
+    dnf needs-restarting -r
+elif exists apt
+then
+    echo "Detected APT package manager"
+    if [ -f /var/run/reboot-required ]; then
+        echo 'reboot required'
+    else
+        echo 'no reboot required'
+    fi
+else
+    echo "Did not detect any package manager, cannot check if reboot is required!"
+fi
+
