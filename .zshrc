@@ -89,7 +89,6 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     autoenv
-    ssh-agent
 )
 autoload -U compinit && compinit
 
