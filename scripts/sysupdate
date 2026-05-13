@@ -36,6 +36,7 @@ fi
 
 if exists flatpak
 then
+    curl --silent https://raw.githubusercontent.com/ivanalejandro0/flatpak-update-checker/a40a7275c36fc2a649738d33897c5d339f787224/flatpak-check-updates.py | python
     flatpak update
 fi
 
